@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Api gems
 gem 'active_model_serializers'
-
+gem 'devise', '~> 3.4.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

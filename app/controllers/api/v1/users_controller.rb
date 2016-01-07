@@ -11,7 +11,8 @@ class Api::V1::UsersController < ApplicationController
 
 	def index
 		@users = User.all
-		render json:  { :flag => true, :user => @users }
+		#render json:  { :flag => true, :user => @users }
+    render json: @users
 		#respond_to do |format|
 		#	format.json { render json: @users }
 		#end

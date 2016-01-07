@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-	wrap_parameters format: [:json, :xml, :url_encoded_form, :multipart_form]
+	#wrap_parameters format: [:json, :xml, :url_encoded_form, :multipart_form]
 	wrap_parameters :user, include: [:username, :email, :password, :password_confirmation]
 	skip_before_filter  :verify_authenticity_token
 	respond_to :json

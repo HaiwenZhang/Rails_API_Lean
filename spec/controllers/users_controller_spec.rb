@@ -10,7 +10,8 @@ RSpec.describe UsersController, type: :controller do
     end
 
     it "returns the information about a reporter on a hash"do
-      user_response = JSON.parse(response.body, symbolize_names: true)
+      # user_response = JSON.parse(response.body, symbolize_names: true)
+      user_response = json_response
       expect(user_response[:email]).to eql @user.email
       expect(response).to have_http_status(200)
     end

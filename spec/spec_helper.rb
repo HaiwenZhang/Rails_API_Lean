@@ -24,6 +24,8 @@ RSpec.configure do |config|
 
     #Including to test requests
     config.include Request::JsonHelpers, :type => :controller
+    config.include Devise::TestHelpers, :type => :controller
+
   end
 
   # rspec-mocks config goes here. You can use an alternate test double

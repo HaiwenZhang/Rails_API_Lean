@@ -2,7 +2,10 @@ class UsersController < ApplicationController
   respond_to :json
 
   def show
-    render json: User.find(params[:id]), status: 200
+    @user = User.find(params[:id])
+    if stale?(etag: @user, last_modified: @user.updated_at)
+      render json: @user, status: 200
+    end
   end
 
   def create

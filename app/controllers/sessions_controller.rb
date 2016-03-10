@@ -22,4 +22,3 @@ class SessionsController < ApplicationController
     head 204
   end
 end
-# 13355811922

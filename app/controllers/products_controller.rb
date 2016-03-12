@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
     if product.save
       render json: product, status: 201
     else
-      render json: { errors: product.errors.fullmessages }, status: 422
+      render json: { errors: product.errors.full_messages }, status: 422
     end
   end
 
@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     if product.update(product_params)
       render json: product, status: 200
     else
-      render json: { errors: product.errors.fullmessages }, status: 422
+      render json: { errors: product.errors.full_messages }, status: 422
     end
   end
 

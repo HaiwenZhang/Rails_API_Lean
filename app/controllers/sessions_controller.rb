@@ -5,8 +5,8 @@ class SessionsController < ApplicationController
     password = params[:session][:password]
     email = params[:session][:email]
     user = email.present? && User.find_by(email: email)
-    if user.valid_password? password
-      sign_in user
+    if user and user.valid_password? password
+      #sign_in user
       user.generate_authentication_token!
       user.save
       render json: user, status: 200
